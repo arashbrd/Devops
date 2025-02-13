@@ -172,3 +172,4 @@ cython_debug/
 # BY ARASH BORDBAR
 .vagrant/
 .qodo/
+lynis/
