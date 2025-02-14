@@ -1,5 +1,5 @@
 - name: install and configuration docker
-  hosts: all
+  hosts: node 
   become: true
   gather_facts: true
   roles:

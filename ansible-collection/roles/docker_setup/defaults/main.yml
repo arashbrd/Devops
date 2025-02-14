@@ -11,22 +11,22 @@ docker_dependencies:
   - gpg
 
 docker_packages:
-  - containerd.io
   - docker-ce
-  - docker-buildx-plugin
   - docker-ce-cli
-  - docker-ce-rootless-extras
+  - containerd.io
+  - docker-buildx-plugin
   - docker-compose-plugin
-  - docker-scan-plugin
+  - docker-ce-rootless-extras
+  # - docker-scan-plugin
 
 ## choose centos docker repo channel enable status
 docker_repo:
   channel:
     stable_enabled: true
-    test_enabled: false
-    nightly_enabled: false
-  gpg_url: https://repo.mecan.ir/repository/debian-docker/gpg   # https://download.docker.com/linux/ubuntu/gpg
-  repo_url: https://repo.mecan.ir/repository/debian-docker/     # https://download.docker.com/linux/
+    
+  gpg_url:  https://download.docker.com/linux/ubuntu/gpg #https://repo.mecan.ir/repository/ubuntu-docker/gpg
+  repo_url: https://download.docker.com/linux/     # https://repo.mecan.ir/repository/ubuntu-docker/
+  keyring_path: /etc/apt/keyrings/docker.asc     # https://repo.mecan.ir/repository/ubuntu-docker/
 
 docker_config:
   proxy:

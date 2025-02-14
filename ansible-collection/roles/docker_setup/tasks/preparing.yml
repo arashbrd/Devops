@@ -7,7 +7,23 @@
 - name: add apt signing key (debian)
   ansible.builtin.apt_key:
     url: "{{ docker_repo.gpg_url }}"
+    keyring: "{{ docker_repo.keyring_path }}" 
+
   become: true
+
+- name: change the file permission of keyringsss
+  become: true
+  ansible.builtin.file:    
+    path: "/etc/apt/keyrings"
+    mode: '0755'
+    state: directory
+- name: change the file permission of keyring
+  become: true
+  ansible.builtin.file:
+    path: "{{ docker_repo.keyring_path }}"
+    mode: '644'
+   
+ 
 
 - name: install official docker repositories for debian based
   ansible.builtin.template:
