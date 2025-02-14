@@ -24,9 +24,9 @@ docker_repo:
   channel:
     stable_enabled: true
     
-  gpg_url:  https://download.docker.com/linux/ubuntu/gpg #https://repo.mecan.ir/repository/ubuntu-docker/gpg
-  repo_url: https://download.docker.com/linux/     # https://repo.mecan.ir/repository/ubuntu-docker/
-  keyring_path: /etc/apt/keyrings/docker.asc     # https://repo.mecan.ir/repository/ubuntu-docker/
+  gpg_url:  https://repo.mecan.ir/repository/ubuntu-docker/gpg # https://download.docker.com/linux/ubuntu/gpg 
+  repo_url: https://repo.mecan.ir/repository/ubuntu-docker/    #  https://download.docker.com/linux/
+  keyring_path: /etc/apt/keyrings/docker1.asc     
 
 docker_config:
   proxy:
